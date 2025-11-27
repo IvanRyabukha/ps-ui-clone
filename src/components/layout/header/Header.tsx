@@ -45,7 +45,7 @@ export function Header() {
 
       <div className="flex items-center justify-end gap-6 text-sm font-semibold">
         <div className="flex items-center gap-1.5">
-          <Bell fill="white" />
+          <Bell />
           <span>12</span>
         </div>
         

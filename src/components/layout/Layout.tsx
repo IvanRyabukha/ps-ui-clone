@@ -21,10 +21,10 @@ export default function Layout({
           pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 100%)',
+            'radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 100%)',
         }}
       />
-      <div className="relative">
+      <div className="relative h-full">
         <Header />
 
         {children}
