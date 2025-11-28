@@ -9,10 +9,10 @@ export default function Layout({
     <div
       className="bg-cover
         bg-no-repeat bg-center
-        h-screen relative"
+        h-screen relative overflow-hidden"
       style={{
         backgroundImage:
-          'url(/images/final-fantasy-vii-remake-8k-2020-95-1920x1080.jpg)',
+          'url(/images/backgrounds/final-fantasy-vii-remake.jpg)',
       }}
     >
       <div

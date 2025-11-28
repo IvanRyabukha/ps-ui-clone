@@ -33,7 +33,7 @@ export function TopMenu({
                   `border-2 rounded-full
                   py-0.5
                   px-5
-                  font-semibold`,
+                  font-semibold transition-all duration-200 ease-out`,
                   activeCategory ===
                     category.slug
                     ? 'border-[#1266b4]'
