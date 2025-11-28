@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
 
 :root {
-  font-family: "Poppins", sans-serif;
+  font-family:
+    'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -27,4 +28,40 @@ body {
 
 button {
   cursor: pointer;
+}
+
+.swiper,
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-slide-active
+  > button
+  > div {
+  @apply shadow-xl;
+}
+
+.swiper-slide {
+  transition: transform 0.3s
+    ease-in-out;
+  will-change: transform;
+}
+.swiper-slide-active {
+  transform: scale(
+    1.15
+  ) !important;
+  z-index: 10;
+}
+
+.swiper-slide-active
+  > button
+  > div:first-child {
+  @apply border-white;
+}
+
+.swiper-slide-active
+  > button
+  > div:last-child
+  > img {
+  @apply opacity-70;
 }
