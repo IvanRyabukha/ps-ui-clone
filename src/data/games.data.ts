@@ -7,7 +7,7 @@ export const GAMES_DATA = [
     coverImage:
       '/images/covers/ps-store-cover.jpg',
     bgImage:
-      '/images/backgrounds/ps-store-bg.jpg',
+      '/images/backgrounds/playstation-store.jpg',
     platform: 'PS5',
   },
 
@@ -29,7 +29,7 @@ export const GAMES_DATA = [
     coverImage:
       '/images/covers/ghost-of-tsushima-game.jpg',
     bgImage:
-      '/images/backgrounds/ghost-of-tsushima-ce.jpg',
+      '/images/backgrounds/ghost-of-tsushima.jpg',
     platform: 'PS5',
   },
   {
@@ -48,7 +48,7 @@ export const GAMES_DATA = [
     coverImage:
       '/images/covers/bloodborne-cover.jpg',
     bgImage:
-      '/images/backgrounds/bloodborne-ps4-game.jpg',
+      '/images/backgrounds/bloodborne.jpg',
     platform: 'PS4',
   },
   {
@@ -68,7 +68,7 @@ export const GAMES_DATA = [
     coverImage:
       '/images/covers/tlou-cover.jpg',
     bgImage:
-      '/images/backgrounds/The-Last-of-Us-Part2-Wallpaper.jpg',
+      '/images/backgrounds/the-last-of-us-part-2.jpg',
     platform: 'PS4',
   },
   {
@@ -78,7 +78,7 @@ export const GAMES_DATA = [
     coverImage:
       '/images/covers/horizon-forbidden-west.jpg',
     bgImage:
-      '/images/backgrounds/horizon-ii-forbidden-west.jpg',
+      '/images/backgrounds/horizon-forbidden-west.jpg',
     platform: 'PS5',
   },
   {
@@ -87,7 +87,7 @@ export const GAMES_DATA = [
     coverImage:
       '/images/covers/elden-ring-cover.jpg',
     bgImage:
-      '/images/backgrounds/elden-ring-bg.jpg',
+      '/images/backgrounds/elden-ring.jpg',
     platform: 'PS5',
   },
   {
@@ -96,7 +96,7 @@ export const GAMES_DATA = [
     coverImage:
       '/images/covers/death-standing-cover.jpg',
     bgImage:
-      '/images/backgrounds/2020-death-stranding.jpg',
+      '/images/backgrounds/death-stranding.jpg',
     platform: 'PS4',
   },
   {
@@ -106,7 +106,7 @@ export const GAMES_DATA = [
     coverImage:
       '/images/covers/resident-evil-4.jpg',
     bgImage:
-      '/images/backgrounds/2023-resident-evil-4.jpg',
+      '/images/backgrounds/resident-evil-4-remake.jpg',
     platform: 'PS5',
   },
 ];

@@ -1,0 +1,19 @@
+import { create } from 'zustand'
+import { GAMES_DATA, type TGame } from '../data/games.data';
+
+interface IStore {
+  activeGameSlug: string;
+  setActiveGameSlug: (slug: string) => void;
+  getActiveGame: () => TGame | undefined; 
+}
+
+export const useGameStore = create<IStore>((set) => ({
+  activeGameSlug: 'final-fantasy-vii-remake',
+  setActiveGameSlug: (slug: string) => set({ activeGameSlug: slug }),
+  getActiveGame: (): TGame | undefined => {
+    const state = useGameStore.getState();
+    const game = GAMES_DATA.find(g => g.slug === state.activeGameSlug);
+
+    return game;
+  }
+}))
