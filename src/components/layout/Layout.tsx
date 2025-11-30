@@ -1,10 +1,12 @@
 import type { PropsWithChildren } from 'react';
 import { Header } from './header/Header';
 import { Footer } from './footer/Footer';
+import { useGameStore } from '../../store/store';
 
 export default function Layout({
   children,
 }: PropsWithChildren<unknown>) {
+  const { getActiveGame } = useGameStore();
   return (
     <div
       className="bg-cover
@@ -12,7 +14,7 @@ export default function Layout({
         h-screen relative overflow-hidden"
       style={{
         backgroundImage:
-          'url(/images/backgrounds/final-fantasy-vii-remake.jpg)',
+          `url(${getActiveGame()?.bgImage})`,
       }}
     >
       <div

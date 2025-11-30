@@ -2,8 +2,7 @@
 @import 'tailwindcss';
 
 :root {
-  font-family:
-    'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -35,33 +34,44 @@ button {
   overflow: visible !important;
 }
 
-.swiper-slide-active
-  > button
-  > div {
-  @apply shadow-xl;
-}
-
 .swiper-slide {
-  transition: transform 0.3s
-    ease-in-out;
+  transition: transform 0.3s ease-in-out;
   will-change: transform;
 }
+
 .swiper-slide-active {
-  transform: scale(
-    1.15
-  ) !important;
+  transform: scale(1.15) !important;
   z-index: 10;
 }
 
-.swiper-slide-active
-  > button
-  > div:first-child {
+.swiper-slide-active > button > div:first-child {
   @apply border-white;
 }
 
-.swiper-slide-active
-  > button
-  > div:last-child
-  > img {
+.swiper-slide-active > button > div:last-child > img {
   @apply opacity-70;
+}
+
+.carousel-disabled .swiper-slide-active {
+  transform: scale(1) !important;
+  z-index: 1;
+}
+
+.carousel-disabled .swiper-slide-active > button > div:first-child {
+  border-color: transparent !important;
+}
+
+.carousel-disabled .swiper-slide-active > button > div:last-child > img {
+  opacity: 0 !important;
+}
+
+.carousel-disabled {
+  opacity: 0.55;
+  filter: blur(1.5px) brightness(0.8) saturate(0.7);
+  transform: scale(0.97);
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    filter 0.3s ease,
+    transform 0.3s ease;
 }

@@ -1,6 +1,6 @@
-export interface ICategory {
+export interface IMenuItem {
   title: string;
-  slug: TCategorySlug;
+  slug: string;
 }
 
 export type TCategorySlug =
