@@ -1,8 +1,3 @@
-// interface Props {
-//   trophyProgress: number;
-//   onStartGame: () => void;
-// }
-
 export function GameLauncher() {
   return (
     <div>
