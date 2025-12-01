@@ -16,4 +16,18 @@ export const useGameStore = create<IStore>((set) => ({
 
     return game;
   }
-}))
+}));
+
+type TLevelFocus = 'top-menu' | 'game-carusel' | 'details';
+
+interface ILevelFocus {
+  levelFocus: TLevelFocus;
+  setLevelFocus: (slug: TLevelFocus) => void;
+  getLevelFocus: () => TLevelFocus;
+};
+
+export const useLevelFocusStore = create<ILevelFocus>((set) => ({
+  levelFocus: 'game-carusel',
+  setLevelFocus: (slug: TLevelFocus) => set({ levelFocus: slug}),
+  getLevelFocus: (): TLevelFocus => useLevelFocusStore.getState().levelFocus,
+}));

@@ -1,16 +1,12 @@
 import { useGameStore } from '../../store/store';
 import { GameHeader } from './GameHeader';
 import { GameLauncher } from './GameLauncher';
-import cn from 'clsx';
 
-export function GameDetails({ levelFocus }: { levelFocus: string }) {
+export function GameDetails() {
   const { getActiveGame } = useGameStore();
   return (
     <div
-      className={cn(
-        'items-center justify-between mx-28',
-        levelFocus === 'details' ? 'flex' : 'hidden'
-      )}
+      className={'flex items-center justify-between mx-28'}
     >
       <GameHeader game={getActiveGame()} />
       <GameLauncher />

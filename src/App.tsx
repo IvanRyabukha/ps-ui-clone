@@ -7,13 +7,14 @@ import { KeyEnum } from './config/hotkeys.config';
 import { type SwiperRef } from 'swiper/react';
 import { CATERGORIES } from './data/menu.data';
 import { GameDetails } from './components/game-details/GameDetails';
-import cn from 'clsx';
+import { motion } from 'framer-motion';
+import { useLevelFocusStore } from './store/store';
 
-type TLevelFocus = 'top-menu' | 'game-carusel' | 'details';
+
 
 function App() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
-  const [levelFocus, setLevelFocus] = useState<TLevelFocus>('game-carusel');
+  const { levelFocus, setLevelFocus } = useLevelFocusStore();
 
   const swiperRef = useRef<SwiperRef>(null);
 
@@ -60,31 +61,47 @@ function App() {
   return (
     <div
       className="flex flex-col justify-between"
-      style={{
-        height: '80%',
-      }}
     >
-      <div
-        className={cn(
-          'ml-28 mt-5',
-          levelFocus === 'details' ? 'hidden' : 'block'
-        )}
+      <motion.div
+        className="ml-28 mt-5"
+        animate={
+          levelFocus === 'details'
+            ? { opacity: 0, y: -30, pointerEvents: 'none' }
+            : { opacity: 1, y: 0, pointerEvents: 'auto' }
+        }
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
       >
         <Menu
           activeValue={activeCategory}
           onSelect={setActiveCategory}
           items={CATERGORIES}
         />
-      </div>
+      </motion.div>
 
-      <div className={cn(levelFocus === 'details' ? 'hidden' : 'block')}>
+      <motion.div
+        animate={
+          levelFocus === 'details'
+            ? { opacity: 0, y: -40, pointerEvents: 'none' }
+            : { opacity: 1, y: '150%', pointerEvents: 'auto' }
+        }
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
+      >
         <GameCarusel
           swiperRef={swiperRef}
           isCarouselActive={levelFocus === 'game-carusel'}
         />
-      </div>
+      </motion.div>
 
-      <GameDetails levelFocus={levelFocus} />
+      <motion.div
+        animate={
+          levelFocus === 'details'
+            ? { opacity: 1, y: 0 }
+            : { opacity: 0, y: 40 }
+        }
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
+      >
+        <GameDetails />
+      </motion.div>
     </div>
   );
 }
