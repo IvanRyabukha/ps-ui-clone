@@ -48,7 +48,7 @@ export function Header() {
           <Bell />
           <span>12</span>
         </div>
-        
+
         <div className="flex items-center gap-1.5">
           <Sticker />
           <span>9</span>
@@ -56,14 +56,14 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <img
-            src="/icons/ps-plus-logo.svg"
+            src="icons/ps-plus-logo.svg"
             alt="PS Plus"
             width={24}
             height={24}
           />
           <div className="flex items-center gap-3">
             <img
-              src="/images/avatar.png"
+              src="images/avatar.png"
               alt="ProfileName"
               width={45}
               height={45}
