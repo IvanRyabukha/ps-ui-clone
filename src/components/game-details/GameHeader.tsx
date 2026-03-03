@@ -45,8 +45,8 @@ export function GameHeader({ game }: Props) {
             <img
               src={
                 game?.platform === 'PS5'
-                  ? '/images/ps-5-logo.png'
-                  : '/images/ps-4-logo.png'
+                  ? 'images/ps-5-logo.png'
+                  : 'images/ps-4-logo.png'
               }
               alt={game?.platform}
               width={50}
